@@ -1,0 +1,18 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libimobiledevice"
+VERSION=1.1.5
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="iOS device library for Win64 toolchain"
+DESCRIPTION="A library to communicate with services of Apple iOS devices using
+native protocols."
+HOMEPAGE="http://www.libimobiledevice.org/"
+SRC_URI="http://www.libimobiledevice.org/downloads/libimobiledevice-${VERSION}.tar.bz2"
+SRC_DIR="libimobiledevice-${VERSION}"
+
+DIFF_EXCLUDES="Makefile"
+
+CYGCONF_ARGS="--without-cython"
+MAKEOPTS+=" bin_PROGRAMS= man_MANS= "
